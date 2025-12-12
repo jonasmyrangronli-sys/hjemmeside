@@ -1,0 +1,284 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    grid-template-areas: "H"
+                         "N"
+                         "M"
+                         "F";
+    background-color: grey
+}
+
+header{
+    grid-area: H;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1{
+    color: black;
+    letter-spacing: 5px;
+    text-decoration: underline;
+}
+
+nav{
+    grid-area: N;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 10%;
+    flex-wrap: wrap;
+}
+
+#startside {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    padding: 40px 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 1.2;
+}
+
+@media (max-width: 900px) {
+    #startside {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    #startside {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+#startside section {
+    background: white;
+    border: 4px ridge #999;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    width: 100%;
+    min-height: 240px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#boks3{
+align-items: center;
+padding: 0;
+}
+
+.side {
+  display: none;
+}
+
+.side.aktiv {
+  display: block;
+}
+
+#boks3 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+}
+
+button{
+    background-color: black;
+    padding: 1% 2%;
+    border: solid white;
+    border-radius: 50%;
+    font-size: large;
+    cursor: pointer;
+    color: white;
+}
+
+main{
+    grid-area: M;
+    background-color: whitesmoke;
+    padding: 4%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-content: center;
+}
+
+footer{
+    grid-area: F;
+    background-color: black;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    color: white;
+    text-indent: 40px;
+}
+
+#ommeg{
+    grid-column: 1 / -1;
+    .h{
+        text-align: left;
+    }
+    .h2{
+        font-size: 2rem;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .h3{
+        font-size: 1.2rem;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+
+#interesse{
+    text-align: center;
+}
+
+#interesse h2{
+    font-size: 2rem;
+    padding-bottom: 10px;
+}
+
+#interesse .img{
+    vertical-align: sub; 
+}
+
+#interesse .ol{
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0 auto;
+    line-height: 24px;
+    text-align: center;
+}
+
+#interesse #liten{
+    font-size: 13px;
+}
+
+#artists{
+    font-size: 24px;
+    li{
+    line-height: 2;
+    }
+}
+
+#faglig{
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0 auto;
+    line-height: 24px;
+    grid-column: 1 / -1;
+    text-align: center;
+    h2{
+        font-size: 2rem;
+        padding-bottom: 10px;
+    }
+    #int{
+    text-decoration: none;
+    letter-spacing: 0px;
+    font-size: xx-large;
+    }
+}
+
+
+#Kontaktinfo li::before {
+    content: "• ";
+    color: black;
+    padding-right: 2px;
+}
+#int{
+    text-decoration: none;
+    letter-spacing: 0px;
+    font-size: xx-large;
+}
+
+#ki{
+    text-decoration: none;
+    letter-spacing: 0px;
+}
+
+#fagknapp{
+    background-color: rgb(255, 255, 255);
+    border: solid rgb(0, 0, 0);
+    padding: 1% 2%;
+    border-radius: 50%;
+    font-size: large;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+#Kontaktinfo{
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0 auto;
+    line-height: 24px;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-bottom: 200px;
+    h2{
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+    ul{
+        list-style: none;
+        padding-left: 0;
+        margin: 0 auto;
+        line-height: 24px;
+        display: inline-block;
+        text-align: left;
+    }
+}
+
+#Kontaktinfo li::before {
+    content: "• ";
+    color: black;
+    padding-right: 2px;
+}
+
+#innstillinger{
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0 auto;
+    line-height: 24px;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-bottom: 200px;
+    h2{
+        font-size: 2rem;
+        padding-bottom: 10px;
+    }
+}
+
+.fargevalg {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.fargevalg button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.fargevalg button:hover button {
+    transform: scale(1.15);
+}
+
+.fargevalg button:active {
+    transform: scale(0.95);
+}
